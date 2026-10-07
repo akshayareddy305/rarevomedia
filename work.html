@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | RAREVO</title>
+<meta name="description" content="RAREVO creates premium websites and digital marketing experiences for ambitious brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* =========================================================
+   RAREVO — BLACK + ELECTRIC BLUE DESIGN SYSTEM
+   (identical tokens to index.html)
+
+   #050505  BLACK
+   #FFFFFF  WHITE
+   #155BFF  ELECTRIC BLUE
+   #2F7BFF  BRIGHT BLUE
+   #1A1A1A  CHARCOAL
+========================================================= */
+:root{
+  --black:#050505;
+  --white:#ffffff;
+  --blue:#155BFF;
+  --blue-bright:#2F7BFF;
+  --charcoal:#1A1A1A;
+  --grey-1:#777777;
+  --grey-2:#aaaaaa;
+  --grey-3:#dddddd;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--white);
+  color:var(--black);
+  font-family:'Inter',Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Space Grotesk','Manrope',Arial,sans-serif;font-weight:600;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button,a{-webkit-tap-highlight-color:transparent;}
+
+/* =========================================================
+   NAVBAR (same as homepage)
+========================================================= */
+.rarevo-navbar{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:calc(100% - 40px);
+  max-width:1450px;
+  height:72px;
+  padding:0 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(5,5,5,.92);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50px;
+  box-shadow:0 10px 35px rgba(0,0,0,.14);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  z-index:9999;
+  transition:.35s ease;
+}
+.rarevo-logo{
+  font-family:'Space Grotesk','Manrope',Arial,sans-serif;
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:-1.5px;
+  color:#fff;
+}
+.rarevo-logo span{color:var(--blue);}
+.rarevo-nav{display:flex;align-items:center;gap:36px;}
+.rarevo-nav a{
+  position:relative;
+  font-size:14px;
+  font-weight:600;
+  color:#e8e8e8;
+  transition:.3s ease;
+}
+.rarevo-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:var(--blue);
+  transition:.3s ease;
+}
+.rarevo-nav a:hover{color:var(--blue-bright);}
+.rarevo-nav a:hover::after{width:100%;}
+.rarevo-nav a.active{color:var(--blue-bright);}
+.rarevo-nav a.active::after{width:100%;}
+.rarevo-nav-button{
+  padding:13px 22px;
+  border-radius:30px;
+  background:var(--blue)!important;
+  color:#fff!important;
+  border:1px solid var(--blue);
+}
+.rarevo-nav-button:hover{
+  background:#fff!important;
+  color:var(--black)!important;
+  border-color:#fff;
+}
+.rarevo-nav-button::after{display:none;}
+
+/* =========================================================
+   WORK — PROJECT SHOWCASE (black)
+========================================================= */
+.rarevo-work{
+  background:var(--black);
+  color:#fff;
+  padding:170px 5% 130px;
+}
+.rarevo-work-header{
+  max-width:1450px;
+  margin:0 auto 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+}
+.rarevo-section-eyebrow{
+  color:var(--blue-bright);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  margin-bottom:15px;
+}
+.rarevo-work-title{
+  max-width:800px;
+  font-size:clamp(45px,6vw,76px);
+  line-height:.95;
+  letter-spacing:-4px;
+  font-weight:600;
+}
+.rarevo-work-description{
+  max-width:400px;
+  color:#999;
+  font-size:17px;
+  line-height:1.7;
+}
+
+.portfolio-grid{
+  max-width:1450px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px 40px;
+}
+.project{position:relative;}
+.project-image{
+  position:relative;
+  height:430px;
+  overflow:hidden;
+  border-radius:18px;
+  background:var(--charcoal);
+  border:1px solid rgba(255,255,255,.08);
+}
+.project-screen{
+  width:75%;
+  height:78%;
+  background:#fff;
+  position:relative;
+  top:11%;
+  left:12.5%;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 25px 60px rgba(0,0,0,.45);
+  transition:transform .7s ease;
+}
+.project:hover .project-screen{transform:scale(1.04) translateY(-8px);}
+.screen-top{height:30px;border-bottom:1px solid #e6e6e6;background:#fafafa;}
+.screen-content{padding:24px 28px;color:var(--black);}
+
+.project-content{
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.project-content h3{font-size:25px;font-weight:600;color:#fff;}
+.project-content span{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  color:#999;
+}
+
+/* Fashion mockup */
+.fashion-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+.fashion-logo{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:800;letter-spacing:3px;color:var(--black);}
+.fashion-links{display:flex;gap:14px;}
+.fashion-links span{width:5px;height:5px;border-radius:50%;background:var(--grey-1);}
+.fashion-hero{height:150px;border-radius:8px;background:var(--blue);position:relative;display:flex;align-items:flex-end;padding:16px;overflow:hidden;}
+.fashion-hero span{background:var(--black);color:#fff;font-size:9px;font-weight:700;letter-spacing:2px;padding:8px 14px;border-radius:20px;}
+.fashion-products{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.fashion-product{background:#f5f5f3;border-radius:6px;overflow:hidden;}
+.fashion-product-img{height:58px;background:var(--grey-3);}
+.fashion-product span{display:block;padding:7px 8px 9px;font-size:10px;font-weight:700;color:var(--black);}
+
+/* Corporate mockup */
+.corporate-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.corporate-logo{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:var(--black);}
+.corporate-menu{display:flex;gap:12px;}
+.corporate-menu span{width:26px;height:5px;border-radius:3px;background:var(--grey-3);}
+.corporate-hero{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;}
+.corporate-heading{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;line-height:1.05;letter-spacing:-1px;color:var(--black);max-width:60%;}
+.corporate-btn{background:var(--blue);color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:10px 16px;border-radius:20px;white-space:nowrap;}
+.corporate-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;padding-top:18px;border-top:1px solid var(--grey-3);}
+.corporate-stats strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--black);letter-spacing:-1px;}
+.corporate-stats span{font-size:9px;color:var(--grey-1);letter-spacing:1px;text-transform:uppercase;}
+
+/* Service mockup */
+.service-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.service-logo{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:var(--black);}
+.service-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);}
+.service-hero{margin-bottom:18px;}
+.service-hero h4{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;letter-spacing:-.5px;line-height:1.15;color:var(--black);max-width:80%;}
+.service-hero p{margin-top:8px;font-size:10px;color:var(--grey-1);letter-spacing:.5px;}
+.service-form{background:#f5f5f3;border-radius:10px;padding:16px;}
+.service-field{height:12px;border-radius:4px;background:var(--grey-3);margin-bottom:10px;width:100%;}
+.service-submit{background:var(--blue);color:#fff;text-align:center;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:10px;border-radius:6px;margin-top:14px;}
+
+/* Campaign mockup */
+.campaign-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+.campaign-logo{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:var(--black);}
+.campaign-tag{font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--blue);background:#f2f6ff;padding:5px 10px;border-radius:20px;}
+.campaign-metric{display:flex;align-items:baseline;gap:10px;margin-bottom:16px;}
+.campaign-metric strong{font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:800;letter-spacing:-1.5px;color:var(--black);}
+.campaign-metric span{font-size:10px;color:var(--grey-1);letter-spacing:1px;text-transform:uppercase;}
+.campaign-chart{display:flex;align-items:flex-end;gap:8px;height:64px;margin-bottom:14px;}
+.campaign-chart div{flex:1;border-radius:4px 4px 0 0;background:var(--blue);}
+.campaign-chips{display:flex;gap:8px;}
+.campaign-chips span{flex:1;text-align:center;background:#f5f5f3;color:var(--grey-1);font-size:9px;font-weight:700;letter-spacing:1px;padding:8px 4px;border-radius:6px;}
+
+/* =========================================================
+   CLIENT SITES (white)
+========================================================= */
+.rarevo-clients{
+  background:#fff;
+  color:var(--black);
+  padding:125px 5%;
+}
+.rarevo-clients-inner{max-width:1350px;margin:auto;}
+.client-heading{margin-bottom:60px;}
+.client-heading h3{
+  max-width:850px;
+  font-size:clamp(38px,5vw,64px);
+  line-height:.98;
+  letter-spacing:-3.5px;
+  font-weight:600;
+}
+.client-heading p{
+  margin-top:20px;
+  max-width:520px;
+  color:#555;
+  font-size:17px;
+  line-height:1.7;
+}
+.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.client-card{
+  background:#fff;
+  border:1px solid var(--grey-3);
+  border-radius:16px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:.35s ease;
+}
+.client-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--blue);
+  box-shadow:0 18px 40px rgba(21,91,255,.14);
+}
+.client-banner{
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+  background:var(--black);
+  color:#fff;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.5px;
+  border-bottom:3px solid var(--blue);
+}
+.client-info{padding:20px;flex:1;display:flex;flex-direction:column;gap:12px;}
+.client-tag{
+  align-self:flex-start;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#666;
+  background:#f5f5f3;
+  padding:6px 11px;
+  border-radius:20px;
+}
+.client-info a.client-link{
+  margin-top:auto;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  font-weight:700;
+  color:var(--black);
+  transition:.3s ease;
+}
+.client-info a.client-link:hover{color:var(--blue);}
+
+/* =========================================================
+   CTA (same as homepage contact block)
+========================================================= */
+.rarevo-contact{
+  position:relative;
+  overflow:hidden;
+  padding:145px 5%;
+  background:var(--blue);
+  color:#fff;
+}
+.rarevo-contact::before{
+  content:"RAREVO";
+  position:absolute;
+  right:-70px;
+  bottom:-90px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:220px;
+  font-weight:900;
+  color:rgba(0,0,0,.08);
+  pointer-events:none;
+}
+.rarevo-contact-inner{position:relative;z-index:2;max-width:1100px;margin:auto;}
+.rarevo-contact-eyebrow{font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:20px;}
+.rarevo-contact h2{
+  max-width:950px;
+  font-size:clamp(50px,7vw,95px);
+  line-height:.9;
+  letter-spacing:-6px;
+}
+.rarevo-contact p{
+  max-width:560px;
+  margin-top:30px;
+  font-size:18px;
+  line-height:1.6;
+  color:rgba(255,255,255,.85);
+}
+.rarevo-contact-button{
+  display:inline-flex;
+  margin-top:35px;
+  padding:17px 30px;
+  background:var(--black);
+  color:#fff;
+  border-radius:40px;
+  font-size:14px;
+  font-weight:700;
+  transition:.35s ease;
+}
+.rarevo-contact-button:hover{background:#fff;color:var(--black);transform:translateY(-4px);}
+
+/* =========================================================
+   FOOTER (same as homepage)
+========================================================= */
+.rarevo-footer{background:var(--black);color:#fff;padding:70px 5% 35px;}
+.rarevo-footer-top{max-width:1400px;margin:auto;display:flex;justify-content:space-between;gap:50px;}
+.rarevo-footer-logo{font-family:'Space Grotesk',sans-serif;font-size:35px;font-weight:800;letter-spacing:-2px;}
+.rarevo-footer-logo span{color:var(--blue);}
+.rarevo-footer-description{max-width:360px;margin-top:15px;color:#888;font-size:14px;line-height:1.6;}
+.rarevo-footer-links{display:flex;gap:70px;}
+.rarevo-footer-column h4{margin-bottom:20px;color:var(--blue);font-size:11px;letter-spacing:2px;}
+.rarevo-footer-column a{display:block;margin-bottom:12px;color:#aaa;font-size:14px;transition:.3s ease;}
+.rarevo-footer-column a:hover{color:var(--blue-bright);}
+.rarevo-footer-bottom{
+  max-width:1400px;
+  margin:60px auto 0;
+  padding-top:25px;
+  border-top:1px solid #252525;
+  display:flex;
+  justify-content:space-between;
+  color:#666;
+  font-size:12px;
+}
+
+/* WhatsApp (same as homepage) */
+.rarevo-whatsapp{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  width:58px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  font-size:25px;
+  z-index:9998;
+  box-shadow:0 10px 30px rgba(0,0,0,.28);
+  transition:.3s ease;
+}
+.rarevo-whatsapp:hover{transform:translateY(-5px) scale(1.05);}
+
+/* Scroll reveal (same as homepage) */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+  .reveal{opacity:1;transform:none;}
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width:1050px){
+  .rarevo-nav{gap:18px;}
+  .client-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:900px){
+  .rarevo-work{padding:140px 25px 100px;}
+  .rarevo-work-header{flex-direction:column;align-items:flex-start;}
+  .portfolio-grid{grid-template-columns:1fr;gap:50px;}
+}
+@media (max-width:700px){
+  .rarevo-navbar{top:10px;width:calc(100% - 20px);height:62px;padding:0 18px;background:rgba(5,5,5,.96);}
+  .rarevo-nav{display:none;}
+  .rarevo-logo{font-size:20px;}
+  .rarevo-nav-button{display:block;padding:11px 17px;font-size:12px;}
+
+  .rarevo-work{padding:120px 22px 90px;}
+  .rarevo-work-title{font-size:48px;letter-spacing:-3px;}
+  .project-image{height:340px;}
+  .project-screen{width:82%;left:9%;}
+  .screen-content{padding:18px;}
+
+  .rarevo-clients{padding:90px 22px;}
+  .client-heading h3{font-size:42px;letter-spacing:-2.5px;}
+  .client-grid{grid-template-columns:1fr;}
+
+  .rarevo-contact{padding:95px 22px;}
+  .rarevo-contact h2{font-size:55px;letter-spacing:-4px;}
+  .rarevo-contact::before{font-size:100px;}
+
+  .rarevo-footer{padding:60px 22px 30px;}
+  .rarevo-footer-top{flex-direction:column;}
+  .rarevo-footer-links{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .rarevo-footer-bottom{flex-direction:column;gap:10px;}
+}
+@media (max-width:400px){
+  .rarevo-work-title{font-size:42px;}
+  .client-heading h3{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="rarevo-navbar">
+    <a href="index.html" class="rarevo-logo">RARE<span>VO</span></a>
+
+    <nav class="rarevo-nav">
+        </a>
+<nav class="rarevo-nav">
+<a href="index.html">
+      Home
+    </a>
+<a href="work.html">
+      Work
+    </a>
+<a href="services.html">
+      Services
+    </a>
+<a href="team.html">
+      Team
+    </a>
+<a href="about.html">
+      About us
+    </a>
+<a href="contact.html">
+      Contact us
+    </a>
+
+<a class="rarevo-nav-button" href="contact.html">
+      Get In Touch
+    </a>
+    </nav>
+</header>
+
+<!-- SELECTED WORK -->
+<section class="rarevo-work" id="work">
+
+    <div class="rarevo-work-header reveal">
+        <div>
+            <div class="rarevo-section-eyebrow">03 / SELECTED WORK</div>
+            <h2 class="rarevo-work-title">BUILT FOR<br>REAL BRANDS.</h2>
+        </div>
+        <p class="rarevo-work-description">
+            A selection of digital experiences
+            built to communicate clearly and
+            convert visitors.
+        </p>
+    </div>
+
+    <div class="portfolio-grid">
+
+        <div class="project reveal">
+            <div class="project-image">
+                <div class="project-screen">
+                    <div class="screen-top"></div>
+                    <div class="screen-content">
+                        <div class="fashion-nav">
+                            <span class="fashion-logo">LUXÉ</span>
+                            <span class="fashion-links"><span></span><span></span><span></span></span>
+                        </div>
+                        <div class="fashion-hero"><span>NEW COLLECTION</span></div>
+                        <div class="fashion-products">
+                            <div class="fashion-product"><div class="fashion-product-img"></div><span>$128</span></div>
+                            <div class="fashion-product"><div class="fashion-product-img"></div><span>$96</span></div>
+                            <div class="fashion-product"><div class="fashion-product-img"></div><span>$154</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content"><h3>Fashion Brand</h3><span>E-COMMERCE</span></div>
+        </div>
+
+        <div class="project reveal">
+            <div class="project-image">
+                <div class="project-screen">
+                    <div class="screen-top"></div>
+                    <div class="screen-content">
+                        <div class="corporate-nav">
+                            <span class="corporate-logo">NEXCORP</span>
+                            <div class="corporate-menu"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="corporate-hero">
+                            <div class="corporate-heading">GROW YOUR<br>BUSINESS</div>
+                            <div class="corporate-btn">GET STARTED</div>
+                        </div>
+                        <div class="corporate-stats">
+                            <div><strong>200+</strong><span>Clients</span></div>
+                            <div><strong>15</strong><span>Years</span></div>
+                            <div><strong>98%</strong><span>Retention</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content"><h3>Corporate Website</h3><span>BUSINESS</span></div>
+        </div>
+
+        <div class="project reveal">
+            <div class="project-image">
+                <div class="project-screen">
+                    <div class="screen-top"></div>
+                    <div class="screen-content">
+                        <div class="service-nav">
+                            <span class="service-logo">PROSERVE</span>
+                            <span class="service-badge-dot"></span>
+                        </div>
+                        <div class="service-hero">
+                            <h4>TRUSTED LOCAL EXPERTS</h4>
+                            <p>Get a free quote today</p>
+                        </div>
+                        <div class="service-form">
+                            <div class="service-field"></div>
+                            <div class="service-field" style="width:80%"></div>
+                            <div class="service-field" style="width:60%"></div>
+                            <div class="service-submit">GET A QUOTE →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content"><h3>Service Business</h3><span>LEAD GENERATION</span></div>
+        </div>
+
+        <div class="project reveal">
+            <div class="project-image">
+                <div class="project-screen">
+                    <div class="screen-top"></div>
+                    <div class="screen-content">
+                        <div class="campaign-nav">
+                            <span class="campaign-logo">GROWTH LAB</span>
+                            <span class="campaign-tag">LIVE</span>
+                        </div>
+                        <div class="campaign-metric"><strong>+248%</strong><span>Reach</span></div>
+                        <div class="campaign-chart">
+                            <div style="height:30%"></div>
+                            <div style="height:45%"></div>
+                            <div style="height:38%"></div>
+                            <div style="height:62%"></div>
+                            <div style="height:55%"></div>
+                            <div style="height:80%"></div>
+                            <div style="height:100%"></div>
+                        </div>
+                        <div class="campaign-chips">
+                            <span>Impressions</span>
+                            <span>Clicks</span>
+                            <span>ROAS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content"><h3>Marketing Campaign</h3><span>DIGITAL GROWTH</span></div>
+        </div>
+
+    </div>
+</section>
+<!-- =========================================================
+     PORTFOLIO / PROJECT SHOWCASE
+========================================================= -->
+
+<section class="portfolio-showcase" id="portfolio">
+
+  <div class="portfolio-container">
+
+    <!-- Heading -->
+    <div class="portfolio-heading">
+      <p class="portfolio-subtitle">
+        A peek at the storefronts, brand sites and stores we've designed and shipped.
+      </p>
+    </div>
+
+
+    <!-- Projects Grid -->
+    <div class="portfolio-grid">
+
+      <!-- PROJECT 1 -->
+      <a href="https://www.rarevoindia.com/" class="portfolio-card">
+
+        <div class="portfolio-image">
+          <img
+            src="38ded340-bdd1-45ca-a5c8-88175ac1d3fc.png"
+            alt="Accurate View website"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="portfolio-name">
+          <span>Rarevo</span>
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 2 -->
+      <a href="https://www.kprdesignandlaser.com/" class="portfolio-card">
+
+        <div class="portfolio-image">
+          <img
+            src="9dfdaaca-d134-458b-9a2b-17f1205103c3.png"
+            alt="Adwaar website"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="portfolio-name">
+          <span>Kpr laser design and Fabrication</span>
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 3 -->
+      <a href="https://upadhyay.pages.dev/" class="portfolio-card">
+
+        <div class="portfolio-image">
+          <img
+            src="0d9e4833-6901-4c54-9296-59776f1d4f61.png"
+            alt="Anju Selection website"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="portfolio-name">
+          <span>Upadhyaya</span>
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 4 -->
+      <a href="https://www.spicypotlimited.co.uk/" class="portfolio-card">
+
+        <div class="portfolio-image">
+          <img
+            src="ea300b8f-ebb6-46bd-89ac-762ce901c8ae.png"
+            alt="Atmiya website"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="portfolio-name">
+          <span>Spicy hot pot</span>
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PORTFOLIO CSS
+========================================================= -->
+
+<style>
+
+  /* SECTION
+  ========================================================= */
+
+  /* =========================================================
+   PORTFOLIO SHOWCASE
+========================================================= */
+
+.portfolio-showcase {
+    width: 100%;
+    padding: 30px 5% 70px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.portfolio-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.portfolio-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.portfolio-subtitle {
+    margin: 0;
+
+    color: #102b50;
+
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 30px;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PORTFOLIO CARD
+========================================================= */
+
+.portfolio-card {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 2px solid #17283d;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* CARD HOVER */
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #3155ff;
+
+    box-shadow:
+        0 18px 40px rgba(20, 35, 60, 0.15);
+}
+
+
+/* =========================================================
+   WEBSITE PREVIEW WINDOW
+========================================================= */
+
+.portfolio-image {
+    width: 100%;
+
+    /*
+       This is the visible height of
+       the website preview.
+    */
+    height: 620px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   FULL WEBSITE SCREENSHOT
+========================================================= */
+
+.portfolio-image img {
+
+    /*
+       YOUR SCREENSHOT:
+       896px wide
+
+       ACTUAL WEBSITE:
+       approximately 543px wide
+
+       896 / 543 = 1.65
+
+       Therefore we enlarge the screenshot
+       to approximately 165%.
+    */
+
+    position: absolute;
+
+    width: 164.8%;
+
+    max-width: none;
+
+    height: auto;
+
+    display: block;
+
+
+    /*
+       The original screenshot has:
+
+       Left margin ≈ 177px
+       Website width ≈ 543px
+
+       After zooming, the empty left/right
+       margins need to be cropped.
+
+       Centered crop:
+       approximately -32.4%
+    */
+
+    left: -32.4%;
+
+    top: 0;
+
+    transform: none;
+
+    object-fit: initial;
+
+    object-position: top center;
+
+    transition:
+        transform 0.7s cubic-bezier(.2,.7,.2,1);
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   PROJECT NAME
+========================================================= */
+
+.portfolio-name {
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #102b50;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+
+.portfolio-name span {
+    display: inline-block;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 24px;
+    }
+
+    .portfolio-card {
+        max-width: 370px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .portfolio-showcase {
+        padding: 20px 18px 55px;
+    }
+
+
+    .portfolio-heading {
+        margin-bottom: 30px;
+    }
+
+
+    .portfolio-subtitle {
+        font-size: 17px;
+    }
+
+
+    .portfolio-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+
+    .portfolio-card {
+        max-width: 380px;
+    }
+
+
+    .portfolio-image {
+        height: 600px;
+    }
+
+
+    .portfolio-name {
+        height: 48px;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .portfolio-image {
+        height: 540px;
+    }
+
+}
+  /* TABLET
+  ========================================================= */
+
+  @media (max-width: 1100px) {
+
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .portfolio-image {
+      height: 600px;
+    }
+
+  }
+
+
+  /* MOBILE
+  ========================================================= */
+
+  @media (max-width: 650px) {
+
+    .portfolio-showcase {
+      padding: 20px 18px 55px;
+    }
+
+
+    .portfolio-heading {
+      margin-bottom: 30px;
+    }
+
+
+    .portfolio-subtitle {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+
+    .portfolio-image {
+      height: 560px;
+    }
+
+
+    .portfolio-name {
+      height: 48px;
+      font-size: 16px;
+    }
+
+  }
+
+
+  /* SMALL MOBILE
+  ========================================================= */
+
+  @media (max-width: 400px) {
+
+    .portfolio-image {
+      height: 500px;
+    }
+
+  }
+
+</style>
+<!-- REAL CLIENT SITES -->
+<section class="rarevo-clients">
+    <div class="rarevo-clients-inner">
+
+        <div class="client-heading reveal">
+            <div class="rarevo-section-eyebrow" style="color:var(--blue);">REAL CLIENTS, LIVE SITES</div>
+            <h3>Websites we've shipped for real businesses</h3>
+            <p>A selection of live client stores and sites we've designed and built — click through to see any of them in action.</p>
+        </div>
+
+        <div class="client-grid">
+
+            <div class="client-card reveal">
+                <div class="client-banner">GloGlamp</div>
+                <div class="client-info">
+                    <span class="client-tag">Footwear · E-commerce</span>
+                    <a class="client-link" href="https://gloglamp.com" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">Dip Your Toes</div>
+                <div class="client-info">
+                    <span class="client-tag">Footwear · E-commerce</span>
+                    <a class="client-link" href="https://dipyourtoes.in" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">Elba Dorata</div>
+                <div class="client-info">
+                    <span class="client-tag">Luxury Footwear · E-commerce</span>
+                    <a class="client-link" href="https://elbadorata.com" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">Plarsh</div>
+                <div class="client-info">
+                    <span class="client-tag">Home Textiles · E-commerce</span>
+                    <a class="client-link" href="https://plarsh.com" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">Stoa Paris</div>
+                <div class="client-info">
+                    <span class="client-tag">Luxury Bedding · E-commerce</span>
+                    <a class="client-link" href="https://stoaparis.com" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">The Fun Company</div>
+                <div class="client-info">
+                    <span class="client-tag">Fashion Jewellery · E-commerce</span>
+                    <a class="client-link" href="https://thefuncompany.in" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">Illuminate Jewellery</div>
+                <div class="client-info">
+                    <span class="client-tag">Fine Jewellery · E-commerce</span>
+                    <a class="client-link" href="https://illuminatejewellery.in" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">Pink Palette</div>
+                <div class="client-info">
+                    <span class="client-tag">Stationery &amp; Decor · E-commerce</span>
+                    <a class="client-link" href="https://pinkpalette.in" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">KPR Design &amp; Laser</div>
+                <div class="client-info">
+                    <span class="client-tag">Manufacturing · Business Site</span>
+                    <a class="client-link" href="https://www.kprdesignandlaser.com/" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+            <div class="client-card reveal">
+                <div class="client-banner">SpicyPot</div>
+                <div class="client-info">
+                    <span class="client-tag">Food &amp; Catering · Business Site</span>
+                    <a class="client-link" href="https://www.spicypotlimited.co.uk/" target="_blank" rel="noopener">Visit site ↗</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="rarevo-contact" id="contact">
+    <div class="rarevo-contact-inner reveal">
+        <div class="rarevo-contact-eyebrow">HAVE A PROJECT?</div>
+        <h2>LET'S BUILD<br>SOMETHING.</h2>
+        <p>Tell us what you're building and we'll help you turn the idea into a digital experience that works.</p>
+        <a href="index.html#contact" class="rarevo-contact-button">Start a Conversation →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="rarevo-footer">
+  <div class="rarevo-footer-top">
+    <div>
+      <div class="rarevo-footer-logo">RARE<span>VO</span></div>
+      <p class="rarevo-footer-description">Websites, e-commerce, branding and digital marketing for businesses ready to grow online.</p>
+    </div>
+    <div class="rarevo-footer-links">
+      <div class="rarevo-footer-column">
+        <h4>EXPLORE</h4>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+      </div>
+      <div class="rarevo-footer-column">
+        <h4>FOLLOW US</h4>
+        <a href="https://www.instagram.com/rarevo__?stkn=bHd3cmw3cmZneDg2" target="_blank" rel="noopener">@rarevo__ · Studio</a>
+        <a href="https://www.instagram.com/rarevomedia.in?stkn=OGgza2xzYnNobXg3" target="_blank" rel="noopener">@rarevomedia.in · Social &amp; Marketing</a>
+        <a href="https://www.instagram.com/luxurylabel.bags?stkn=MXJycTBoa284cjk0Yw==" target="_blank" rel="noopener">@luxurylabel.bags · Bags</a>
+      </div>
+      <div class="rarevo-footer-column">
+        <h4>CONNECT</h4>
+        <a href="https://wa.me/916301559694" target="_blank" rel="noopener">WhatsApp · We reply fast</a>
+        <a href="https://wa.me/919177731239" target="_blank" rel="noopener">WhatsApp · Order &amp; bag enquiries</a>
+        <a href="contact.html">Contact Form</a>
+      </div>
+    </div>
+  </div>
+  <div class="rarevo-footer-bottom">
+    <span>© 2026 Rarevo. All rights reserved.</span>
+    <span>DESIGN · DEVELOPMENT · MARKETING</span>
+  </div>
+</footer>
+<!-- WHATSAPP -->
+<a href="https://wa.me/916301559694" target="_blank" rel="noopener" class="rarevo-whatsapp" aria-label="Chat with Rarevo on WhatsApp">☎</a>
+
+<script>
+/* Navbar scroll shadow (same as homepage) */
+const navbar = document.querySelector(".rarevo-navbar");
+window.addEventListener("scroll", function(){
+    navbar.style.boxShadow = window.scrollY > 40
+        ? "0 10px 35px rgba(0,0,0,.10)"
+        : "none";
+});
+
+/* Scroll reveal (same as homepage) */
+const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: .12 });
+
+document.querySelectorAll(".reveal").forEach(function(el){
+    revealObserver.observe(el);
+});
+</script>
+
+</body>
+</html>
